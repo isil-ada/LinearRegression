@@ -32,20 +32,6 @@ Aynı veri setine Kaggle üzerinden şu sayfadan erişebilirsiniz:
 
 > Not: Kaggle dışı yerel çalışmada CSV dosyasını indirip kendi klasör yolunuzu `pd.read_csv(...)` içine vermelisiniz.
 
-## 🔧 Nasıl Çalıştırılır?
-1. **Jupyter ile açın**  
-   ```bash
-   jupyter notebook
-   ```
-   Ardından `linear-regression-salary-prediction.ipynb` dosyasını açıp hücreleri sırayla çalıştırın.
-
-2. **(İsteğe bağlı) Script’e dönüştürme**  
-   Defteri script’e çevirmek isterseniz:  
-   ```bash
-   jupyter nbconvert --to python linear-regression-salary-prediction.ipynb
-   python linear-regression-salary-prediction.py
-   ```
-
 ## 🧪 Adım Adım İçerik
 - **Veri Yükleme:** `pandas` ile CSV okunur.
 - **EDA:** `head()`, `info()`, `isnull().sum()`, `describe()` vb. ile veri hızlıca incelenir.
@@ -55,10 +41,6 @@ Aynı veri setine Kaggle üzerinden şu sayfadan erişebilirsiniz:
 - **Tahmin:** `model.predict(X_test)`
 - **Görselleştirme:** Test noktaları (scatter) ve modelin çizgisi (line) aynı grafikte gösterilir.
 
-> İpuçları:
-> - Değerlendirme metriği eklemek için örn. `r2_score`, `mean_absolute_error` ve/veya `mean_squared_error` kullanabilirsiniz.
-> - Özellik ölçekleme bu basit veri setinde şart değil; fakat farklı veri setlerinde `StandardScaler` faydalı olabilir.
-
 ## 📊 Örnek Grafik
 Notebook sonunda **gerçek maaşlar** ile **tahmin edilen maaşların** karşılaştırıldığı bir çizim üretilir (yeşil noktalar & pembe çizgi).
 
@@ -66,12 +48,3 @@ Notebook sonunda **gerçek maaşlar** ile **tahmin edilen maaşların** karşıl
 - Veri seti küçük ve tek değişkenli olduğu için, model yalnızca doğrusal ilişkiyi yakalar. Gerçek dünyada maaşı etkileyen çok daha fazla değişken vardır.
 - Reprodüksiyon için `random_state` parametresi sabitlenebilir.
 - Kaggle’da çalışıyorsanız dosya yolu aynı kalmalı; yerelde çalışıyorsanız yolu güncelleyin.
-
-## 📜 Lisans ve Atıf
-- Veri seti Kaggle üzerinde yayınlanmıştır (bağlantı yukarıda). Kullanım koşulları için **Kaggle sayfasındaki lisansı** kontrol edin.
-- Bu depo/defter eğitim amaçlıdır.
-
----
-
-Herhangi bir geliştirme/düzeltme öneriniz varsa Issues/PR açabilirsiniz. İyi çalışmalar! 🚀
-
